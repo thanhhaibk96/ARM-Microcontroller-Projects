@@ -1,0 +1,123 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.27.1.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Hai Chau Thanh, BKU, LIC=ATT9U-SM7PQ-WD5K8-3M9TH-CJLCN-FB6AB
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+E:\Master\VIAMLAB\AUV Project\AUV_Coding\AUV_Board_STM32F4_1_v3_edited_for_project\Board_STM32F4_1.uvprojx
+Project File Date:  05/06/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Board_STM32F407_1'
+compiling my_camera.c...
+compiling main.c...
+main.c(54): warning:  #177-D: variable "Motors_Start_Up"  was declared but never referenced
+  static bool Motors_Start_Up = false;
+main.c: 1 warning, 0 errors
+compiling my_delay.c...
+compiling my_altimeter.c...
+compiling my_io.c...
+compiling my_can.c...
+my_can.c(54): warning:  #177-D: variable "_IDCANBUS_ARM_2"  was declared but never referenced
+  static int _IDCANBUS_ARM_2 = 0x122;
+my_can.c(57): warning:  #177-D: variable "_IDCANBUS_THRUSTER"  was declared but never referenced
+  static int _IDCANBUS_THRUSTER = 0x125;
+my_can.c(58): warning:  #177-D: variable "_IDCANBUS_EPC"  was declared but never referenced
+  static int _IDCANBUS_EPC = 0x126;
+my_can.c: 3 warnings, 0 errors
+compiling my_bms24v10ah.c...
+compiling my_bms24v40ah.c...
+my_bms24v40ah.c(12): warning:  #177-D: variable "UBMS40_TransmitDataBuffer"  was declared but never referenced
+  static uint8_t UBMS40_TransmitDataBuffer[UBMS40_MAX_TRANSMITDATA_LENGTH] = {'$', 'A', 'U', 'V', '2', '0', '0', '0',
+my_bms24v40ah.c(68): warning:  #177-D: function "UBMS40_Convert_Float_to_Bytes"  was declared but never referenced
+  static void UBMS40_Convert_Float_to_Bytes(float _data_in, uint8_t* _data_out)
+my_bms24v40ah.c: 2 warnings, 0 errors
+compiling my_hardwarereset.c...
+compiling stm32f4xx_it.c...
+compiling my_straingauge.c...
+compiling my_pistonmotor.c...
+my_pistonmotor.c(318): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	uint16_t Duty = (uint16_t)(_duty*(float)UPIS_PWM_DC_MAX/100.0);
+my_pistonmotor.c(415): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		if(u0 > 100.0) u0 = 100.0;
+my_pistonmotor.c(416): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		else if(u0 < 0.0) u0 = 0.0;
+my_pistonmotor.c(482): warning:  #1-D: last line of file ends without a newline
+  }
+my_pistonmotor.c(114): warning:  #177-D: variable "max_position"  was declared but never referenced
+  static const float max_position = 170.0f; // mm
+my_pistonmotor.c(115): warning:  #177-D: variable "min_position"  was declared but never referenced
+  static const float min_position = 0.0f;
+my_pistonmotor.c(117): warning:  #550-D: variable "motor_direction"  was set but never used
+  static uint8_t motor_direction = 0;
+my_pistonmotor.c: 7 warnings, 0 errors
+compiling misc.c...
+compiling stm32f4xx_can.c...
+compiling stm32f4xx_dma.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_syscfg.c...
+compiling stm32f4xx_tim.c...
+compiling stm32f4xx_usart.c...
+compiling stm32f4xx_rcc.c...
+compiling stm32f4xx_flash.c...
+compiling stm32f4xx_exti.c...
+compiling stm32f4xx_wwdg.c...
+assembling startup_stm32f407xx.s...
+compiling stm32f4xx_spi.c...
+compiling stm32f4xx_adc.c...
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=13028 RO-data=448 RW-data=224 ZI-data=1520  
+".\Objects\Board_STM32F4_1.axf" - 0 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Board_STM32F407_1
+  C:\Users\Hai\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Hai\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f407xx.s
+      Source file:   MDK\Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:01:05
+</pre>
+</body>
+</html>
